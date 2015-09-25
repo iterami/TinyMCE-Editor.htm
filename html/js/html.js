@@ -9,19 +9,19 @@ window.onbeforeunload = function(e){
     var content = tinymce.activeEditor.getContent();
     if(content.length > 0){
         window.localStorage.setItem(
-          'c',
+          'lhrd-html',
           content
         );
 
     }else{
-        window.localStorage.removeItem('c');
+        window.localStorage.removeItem('lhrd-html');
     }
 };
 
 window.onload = function(e){
     resize();
-    if(window.localStorage.getItem('c') !== null){
-        tinymce.activeEditor.setContent(window.localStorage.getItem('c'));
+    if(window.localStorage.getItem('lhrd-html') !== null){
+        tinymce.activeEditor.setContent(window.localStorage.getItem('lhrd-html'));
     }
 };
 
