@@ -19,6 +19,16 @@ window.onbeforeunload = function(e){
 };
 
 window.onload = function(e){
+    tinyMCE.init({
+      'content_css': 'css/tinymce.css',
+      'menubar': false,
+      'mode': 'textareas',
+      'plugins': 'code link lists print',
+      'statusbar': false,
+      'toolbar': 'undo redo | bold italic | bullist numlist | link unlink | print code',
+      'valid_elements': 'a[href|target],em,li,ol,p,strong,ul',
+    });
+
     resize();
     if(window.localStorage.getItem('lhrd-html') !== null){
         tinymce.activeEditor.setContent(window.localStorage.getItem('lhrd-html'));
