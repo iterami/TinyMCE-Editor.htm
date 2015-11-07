@@ -1,4 +1,4 @@
-lhrd
-----
+TinyMCE-Editor.htm
+------------------
 
-A repository to hold tools used to assist LHRD.
+CC0 WYSIWYG editor that uses TinyMCE.
