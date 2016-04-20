@@ -2,7 +2,10 @@
 
 function resize(){
     document.getElementById(document.getElementsByClassName('mce-edit-area')[0].firstChild.id).style.height =
-      parseInt(window.innerHeight - 37) + 'px';
+      parseInt(
+        window.innerHeight - 37,
+        10
+      ) + 'px';
 }
 
 window.onbeforeunload = function(e){
