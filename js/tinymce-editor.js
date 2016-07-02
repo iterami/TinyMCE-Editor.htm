@@ -3,7 +3,7 @@
 function resize(){
     document.getElementById(document.getElementsByClassName('mce-edit-area')[0].firstChild.id).style.height =
       parseInt(
-        window.innerHeight - 37,
+        window.innerHeight - 39,
         10
       ) + 'px';
 }
