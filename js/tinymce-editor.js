@@ -22,7 +22,7 @@ window.onbeforeunload = function(e){
 };
 
 window.onload = function(e){
-    tinyMCE.init({
+    tinymce.init({
       'content_css': 'css/tinymce.css',
       'menubar': false,
       'mode': 'textareas',
