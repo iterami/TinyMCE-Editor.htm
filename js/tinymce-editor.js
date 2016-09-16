@@ -33,8 +33,9 @@ window.onload = function(e){
     });
 
     resize();
-    if(window.localStorage.getItem('TinyMCE-Editor.htm-content') !== null){
-        tinymce.activeEditor.setContent(window.localStorage.getItem('TinyMCE-Editor.htm-content'));
+    var content = window.localStorage.getItem('TinyMCE-Editor.htm-content');
+    if(content !== null){
+        tinymce.activeEditor.setContent(content);
     }
 };
 
