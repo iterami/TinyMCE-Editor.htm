@@ -8,19 +8,6 @@ function resize(){
       ) + 'px';
 }
 
-window.onbeforeunload = function(e){
-    var content = tinymce.activeEditor.getContent();
-    if(content.length > 0){
-        window.localStorage.setItem(
-          'TinyMCE-Editor.htm-content',
-          content
-        );
-
-    }else{
-        window.localStorage.removeItem('TinyMCE-Editor.htm-content');
-    }
-};
-
 window.onload = function(e){
     tinymce.init({
       'content_css': 'css/tinymce.css',
@@ -34,6 +21,19 @@ window.onload = function(e){
 
     resize();
     tinymce.activeEditor.setContent(window.localStorage.getItem('TinyMCE-Editor.htm-content') || '');
-};
 
-window.onresize = resize;
+    window.onbeforeunload = function(e){
+        var content = tinymce.activeEditor.getContent();
+        if(content.length > 0){
+            window.localStorage.setItem(
+              'TinyMCE-Editor.htm-content',
+              content
+            );
+
+        }else{
+            window.localStorage.removeItem('TinyMCE-Editor.htm-content');
+        }
+    };
+
+    window.onresize = resize;
+};
