@@ -3,14 +3,13 @@
 function resize(){
     document.getElementById(document.getElementsByClassName('mce-edit-area')[0].firstChild.id).style.height =
       parseInt(
-        window.innerHeight - 39,
+        window.innerHeight - 55,
         10
       ) + 'px';
 }
 
 window.onload = function(e){
     tinymce.init({
-      'content_css': 'css/tinymce.css',
       'menubar': false,
       'mode': 'textareas',
       'plugins': 'code link lists print',
