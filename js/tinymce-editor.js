@@ -1,14 +1,6 @@
 'use strict';
 
-function resize(){
-    document.getElementById(document.getElementsByClassName('mce-edit-area')[0].firstChild.id).style.height =
-      parseInt(
-        window.innerHeight - 55,
-        10
-      ) + 'px';
-}
-
-window.onload = function(e){
+function repo_init(){
     tinymce.init({
       'menubar': false,
       'mode': 'textareas',
@@ -35,4 +27,12 @@ window.onload = function(e){
     };
 
     window.onresize = resize;
-};
+}
+
+function resize(){
+    document.getElementById(document.getElementsByClassName('mce-edit-area')[0].firstChild.id).style.height =
+      parseInt(
+        window.innerHeight - 55,
+        10
+      ) + 'px';
+}
