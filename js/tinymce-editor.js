@@ -1,7 +1,7 @@
 'use strict';
 
 function repo_init(){
-    core_input_binds_add({
+    core_events_bind({
       'beforeunload': {
         'todo': function(){
             var content = tinymce.activeEditor.getContent();
