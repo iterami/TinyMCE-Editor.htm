@@ -1,6 +1,9 @@
 'use strict';
 
 function repo_init(){
+    core_repo_init({
+      'title': 'TinyMCE-Editor.htm',
+    });
     core_events_bind({
       'beforeunload': {
         'todo': function(){
