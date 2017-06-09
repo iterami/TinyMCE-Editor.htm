@@ -2,9 +2,6 @@
 
 function repo_init(){
     core_repo_init({
-      'title': 'TinyMCE-Editor.htm',
-    });
-    core_events_bind({
       'beforeunload': {
         'todo': function(){
             var content = tinymce.activeEditor.getContent();
@@ -19,6 +16,7 @@ function repo_init(){
             }
         },
       },
+      'title': 'TinyMCE-Editor.htm',
     });
 
     tinymce.init({
