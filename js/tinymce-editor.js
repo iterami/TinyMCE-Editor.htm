@@ -18,6 +18,7 @@ function repo_init(){
       },
       'title': 'TinyMCE-Editor.htm',
     });
+    document.body.removeChild(document.getElementById('core-menu-button'));
     document.body.removeChild(document.getElementById('core-menu'));
 
     tinymce.init({
