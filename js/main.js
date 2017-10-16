@@ -1,5 +1,7 @@
 'use strict';
 
+function core_escape(){}
+
 function repo_init(){
     core_repo_init({
       'beforeunload': {
@@ -34,13 +36,3 @@ function repo_init(){
 
     window.onresize = resize;
 }
-
-function resize(){
-    document.getElementById(document.getElementsByClassName('mce-edit-area')[0].firstChild.id).style.height =
-      parseInt(
-        window.innerHeight - 55,
-        10
-      ) + 'px';
-}
-
-function core_escape(){}
