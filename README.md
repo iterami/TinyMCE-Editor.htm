@@ -1,4 +1,6 @@
 iterami/TinyMCE-Editor.htm
 --------------------------
 
-CC0 WYSIWYG editor that uses TinyMCE.
+* Contributing: https://github.com/iterami/Documentation.htm/blob/gh-pages/CONTRIBUTING.md
+* Requires:
+  * [iterami/common](https://github.com/iterami/common)
