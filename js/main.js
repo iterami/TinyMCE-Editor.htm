@@ -6,7 +6,7 @@ function repo_init(){
     core_repo_init({
       'beforeunload': {
         'todo': function(){
-            var content = tinymce.activeEditor.getContent();
+            let content = tinymce.activeEditor.getContent();
             if(content.length > 0){
                 window.localStorage.setItem(
                   'TinyMCE-Editor.htm-content',
