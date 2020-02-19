@@ -8,13 +8,13 @@ function repo_init(){
         'todo': function(){
             const content = tinymce.activeEditor.getContent();
             if(content.length > 0){
-                window.localStorage.setItem(
+                globalThis.localStorage.setItem(
                   'TinyMCE-Editor.htm-content',
                   content
                 );
 
             }else{
-                window.localStorage.removeItem('TinyMCE-Editor.htm-content');
+                globalThis.localStorage.removeItem('TinyMCE-Editor.htm-content');
             }
         },
       },
@@ -32,7 +32,7 @@ function repo_init(){
     });
 
     resize();
-    tinymce.activeEditor.setContent(window.localStorage.getItem('TinyMCE-Editor.htm-content') || '');
+    tinymce.activeEditor.setContent(globalThis.localStorage.getItem('TinyMCE-Editor.htm-content') || '');
 
-    window.onresize = resize;
+    globalThis.onresize = resize;
 }
